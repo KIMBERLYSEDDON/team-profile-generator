@@ -53,14 +53,13 @@ const engineerQuestions = [
     ...baseQuestions,
     {
         type: 'input',
-        message: "What is your GitHub username?",
+        message: "What is this employee's GitHub username?",
         name: 'github',
     },
 ]
 const createEngineer =() => {
     inquirer.prompt(engineerQuestions)
     .then((response) => {
-        console.log(response)
         const engineer = new Engineer(response.name, response.id, response.email, response.github);
         employees.push(engineer)
         menuPrompt();
@@ -71,7 +70,7 @@ const internQuestions = [
     ...baseQuestions,
     {
         type: 'input',
-        message: "What is your school's name?",
+        message: "What is this employee's school's name?",
         name: 'school',
     },
 ]
@@ -87,7 +86,6 @@ const menu = [
 const createIntern =() => {
     inquirer.prompt(internQuestions)
     .then((response) => {
-        console.log(response)
         const intern = new Intern(response.name, response.id, response.email, response.school);
         employees.push(intern)
         menuPrompt();

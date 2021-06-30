@@ -7,7 +7,7 @@ describe("Manager", () => {
 
             expect(manager.name).toEqual("Sally");
             expect(manager.id).toEqual(1);
-            expect(manager.id).toEqual("Sally@web.com");
+            expect(manager.email).toEqual("Sally@web.com");
             expect(manager.officeNumber).toEqual(1);
         });
     })
@@ -22,18 +22,10 @@ describe("Manager", () => {
         expect(cb).toThrowError(err);
     });
 
-    it("should throw and error if id not a number", () => {
-        const cb = () => new Manager("Kevin", "id: 5", "Kevin@web.com", 4 )
-        const err = new Error("ID expected to be a number value");
-
-        expect(cb).toThrowError(err);
-    });
-
     it("should throw error if email is not a string value", () => {
         const cb = () => new Manager("Kevin", 2 , 4, 3);
         const err = new Error("email must be a string value");
         expect(cb).toThrowError(err);
     });
 
-    it
 })

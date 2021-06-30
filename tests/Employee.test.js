@@ -10,9 +10,4 @@ describe("Employee", () => {
             expect(employee.email).toEqual("Kevin@web.com");
         });
     })
-    describe("getName", () => {
-        it("should collect the employee's name", () => {
-            const employee = new Employee("Kevin");
-        });
-    })
 })

@@ -25,11 +25,11 @@ return `<!DOCTYPE html>
     <body>
         <header class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4 text-">Team Profile: </h1>
+            <h1 class="display-4 text-center">Team Profile: </h1>
         </div>
         </header>
         <main class="container">
-        <section class="row">
+        <section class="row d-flex justify-content-center">
     ${employeeData}
         </section>
         </main>
@@ -38,7 +38,7 @@ return `<!DOCTYPE html>
 
 }
 const generateManagerCard = (manager) => {
-    return `<div class="card" style="width: 18rem;">
+    return `<div class="card border-primary m-3" style="width: 18rem;">
     <div class="card-body bg-primary text-light">
       <h5 class="card-title">${manager.name}</h5>
       <p class="card-text">${manager.getRole()}</p>
@@ -46,26 +46,26 @@ const generateManagerCard = (manager) => {
     <ul class="list-group list-group-flush">
       <li class="list-group-item">employee id: ${manager.id}</li>
       <li class="list-group-item">office number: ${manager.officeNumber}</li>
-      <li class="list-group-item">email: <a href="${manager.email}" class="card-link">${manager.email}</a></li>
+      <li class="list-group-item">email: <a href = "mailto: ${manager.email}">${manager.email}</a></li>
     </ul>
   </div>`
 }
 
 const generateEngineerCard = (engineer) => {
-    return `<div class="card" style="width: 18rem;">
+    return `<div class="card border-primary m-3" style="width: 18rem;">
     <div class="card-body bg-primary text-light">
       <h5 class="card-title">${engineer.name}</h5>
       <p class="card-text">${engineer.getRole()}</p>
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">employee id: ${engineer.id}</li>
-      <li class="list-group-item">email: <a href="${engineer.email}" class="card-link">${engineer.email}</a></li>
+      <li class="list-group-item">email: <a href = "mailto: ${engineer.email}">${engineer.email}</a></li>
       <li class="list-group-item">github: <a href="https://github.com/${engineer.github}" target="_blank" class="card-link">${engineer.github}</a></li>
     </ul>
   </div>`
 }
 const generateInternCard = (intern) => {
-    return `<div class="card" style="width: 18rem;">
+    return `<div class="card border-primary m-3" style="width: 18rem;">
     <div class="card-body bg-primary text-light">
       <h5 class="card-title">${intern.name}</h5>
       <p class="card-text">${intern.getRole()}</p>
@@ -73,7 +73,7 @@ const generateInternCard = (intern) => {
     <ul class="list-group list-group-flush">
       <li class="list-group-item">id: ${intern.id}</li>
       <li class="list-group-item">school: ${intern.school}</li>
-      <li class="list-group-item">email: <a href="${intern.email}" class="card-link">${intern.email}</a></li>
+      <li class="list-group-item">email: <a href = "mailto: ${intern.email}">${intern.email}</a></li>
     </ul>
   </div>`
 }
